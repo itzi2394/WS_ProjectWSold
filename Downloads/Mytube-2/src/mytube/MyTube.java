@@ -20,7 +20,7 @@ public class MyTube {
             
             Registry registry = LocateRegistry.createRegistry(Integer.parseInt(port));
             String reg = "rmi://127.0.0.1:"+port+"/"+name;
-            MyTubeImpl server=new MyTubeImpl();
+            MyTubeImpl server=new MyTubeImpl(reg);
             registry.rebind(name, server);
             
             System.out.println("Server "+name+" was succesfully created on port "+port+"."); 

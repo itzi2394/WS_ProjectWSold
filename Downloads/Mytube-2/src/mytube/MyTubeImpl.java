@@ -42,9 +42,9 @@ public class MyTubeImpl extends UnicastRemoteObject implements MyTubeInterface{
     Map<String, Vector> topics=new HashMap();
     private String dir = "//Users//Nya//Servidor//";
     private static Vector clientList;
-    String rmi="";
+    String rmi;
     
-    public MyTubeImpl() throws RemoteException{super();clientList=new Vector();}
+    public MyTubeImpl(String reg) throws RemoteException{super();clientList=new Vector();this.rmi=reg;}
 
 
     
